@@ -1,11 +1,11 @@
  #!/usr/bin/bash
 
 ##############################################################################
-##						Use it with your own risk      						##
-##	This script will dynamically generate data value base upon date and 	##
-##	time retrieved from system, IP addresses, ports, and serial number      ##
-##  need to rely on system to open udp network connectivity                ##                                                           
-##			$ bash log_shooter.sh 10.47.11.248 5 2		                    ##
+##		Use it with your own risk      			  	    ##
+##	This script will dynamically generate data value base upon date and ##
+##	time retrieved from system, IP addresses, ports, and serial number  ##
+##  need to rely on system to open udp network connectivity                 ##                                                           
+##			$ bash log_shooter.sh 10.47.11.248 5 2		    ##
 ##############################################################################
 
 source ./cal_ip.sh
