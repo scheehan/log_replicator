@@ -2,10 +2,10 @@
 
 
 '''
-	Use it with your own risk      			      
-This script will dynamically generate data value base upon date and 
- time retrieved from system, dummy IP addresses, ports, and serial number  
-    need to rely on system to open udp network connectivity                                                          
+	Use it with your own risk.      			      
+This bash script will dynamically generate data value base upon date and 
+time retrieved from system, dummy IP addresses, ports, and serial number  
+    bash script need to rely on system to open udp network connectivity                                                          
      	$ bash log_shooter.sh 10.47.11.248 5 2  	    
 '''
 
@@ -49,7 +49,7 @@ ISERIAL_NUM=758514639		# LOG ENTRY SERIAL NUMBER TO STARTS OFF
 FIRST_IP=223.109.0.0		# IP ADDRESS TO STARTS OFF
 IP=$FIRST_IP				# ASSIGN TO IP VARIABLE
 
-exec 7>/dev/udp/$k_value/514		# open udp connection to target host
+exec 7>/dev/udp/$k_value/514		# open udp connection to target host; /dev/{udp|tcp} feature may not available in all linux distro, it is depending on shell
 
 # case statement. prompt user to select log format
 
@@ -60,7 +60,7 @@ case "$3" in
 1)
 for ((i = 0 ; i < $l_value ; i++)); do
 	
-	# pause 0.2s for each iteration
+	# pause 0.5s for each iteration; adjust interval here
 	sleep 0.5
 
 	# increment source port number and serial number by 1
@@ -91,7 +91,7 @@ exit 0;
 2)
 for ((i = 0 ; i < $l_value ; i++)); do
 	
-	# pause 0.2s for each iteration
+	# pause 0.5s for each iteration; adjust interval here
 	sleep 0.5
 
 	# increment source port number and serial number
