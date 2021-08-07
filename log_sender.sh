@@ -49,7 +49,21 @@ ISERIAL_NUM=758514639		# LOG ENTRY SERIAL NUMBER TO STARTS OFF
 FIRST_IP=223.109.0.0		# IP ADDRESS TO STARTS OFF
 IP=$FIRST_IP				# ASSIGN TO IP VARIABLE
 
-exec 7>/dev/udp/$k_value/514		# open udp connection to target host; /dev/{udp|tcp} feature may not available in all linux distro, it is depending on shell
+exec 7>/dev/udp/$k_value/514		
+
+''' 
+open udp connection to target host; /dev/{udp|tcp} feature may not available in all linux distro, it is depending on shell
+
+A possible error
+
+No such file or directory => If you're getting this error during the execution, it's because your Bash don't have the feature net-redirections enabled.
+
+For example:
+:> /dev/tcp/google.com/443
+bash: /dev/tcp/google.com/443: No such file or directory
+: Is the short version of true. Could also be: true > /dev/tcp/google.com/443
+To fix this error, you can use this script. It will install Bash with net-redirections. This script can be used on Ubuntu or CentOS.
+'''
 
 # case statement. prompt user to select log format
 
