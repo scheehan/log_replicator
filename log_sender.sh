@@ -62,7 +62,7 @@ For example:
 :> /dev/tcp/google.com/443
 bash: /dev/tcp/google.com/443: No such file or directory
 : Is the short version of true. Could also be: true > /dev/tcp/google.com/443
-To fix this error, you can use this script. It will install Bash with net-redirections. This script can be used on Ubuntu or CentOS.
+To fix this error, you need to complile and install Bash with net-redirections.
 '''
 
 # case statement. prompt user to select log format
