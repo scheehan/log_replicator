@@ -76,7 +76,7 @@ for ((i = 0 ; i < $l_value ; i++)); do
 	MY_CTIME=`date +%T`
 
 	# print syslog sample output 
-	result=$(printf "%s\n" "<185>date=$MY_MTIME "time=$MY_CTIME " devname=GN-IPS-4 devid=FGT37D4P17960765 logid=0419016384 type=utm subtype=ips eventtype=signature level=alert vd=TP severity=critical srcip=234.209.91.49 srccountry="Netherlands" dstip="$IP " srcintf="port10" dstintf="port9" policyid=2000 sessionid=1816135564 action=dropped proto=17 service="udp/42448" attack="Netcore.Netis.Devices.Hardcoded.Password.Security.Bypass" srcport="$SRCP_NUM " dstport=53413 direction=outgoing attackid=42781 profile="GSN" ref="http://www.fortinet.com/ids/VID42781" incidentserialno="$ISERIAL_NUM " msg="backdoor\:  Netcore.Netis.Devices.Hardcoded.Password.Security.Bypass," crscore=50 crlevel=critical")
+	result=$(printf "%s\n" "<185>date=$MY_MTIME "time=$MY_CTIME " devname=GN-IPS-4 devid=FGT37D9P00000005 logid=0419016384 type=utm subtype=ips eventtype=signature level=alert vd=TP severity=critical srcip=234.209.91.49 srccountry="Netherlands" dstip="$IP " srcintf="port10" dstintf="port9" policyid=2000 sessionid=1816135564 action=dropped proto=17 service="udp/42448" attack="Netcore.Netis.Devices.Hardcoded.Password.Security.Bypass" srcport="$SRCP_NUM " dstport=53413 direction=outgoing attackid=42781 profile="GSN" ref="http://www.fortinet.com/ids/VID42781" incidentserialno="$ISERIAL_NUM " msg="backdoor\:  Netcore.Netis.Devices.Hardcoded.Password.Security.Bypass," crscore=50 crlevel=critical")
 
 	# echo with std output
 	echo $result
